@@ -1,10 +1,7 @@
 async function fetchNews(q) {
-  var url =
-    "https://newsapi.org/v2/top-headlines?" +
-    "country=us&" +
-    "apiKey=f7cd016d1db243358864867b0fe15e9a";
-  // var req = new Request(url);
-  let p = await fetch(url);
+  var url = "https://project-news-sto7.onrender.com";
+  var req = new Request(url);
+  let p = await fetch(req);
   let response = await p.json();
   console.log(JSON.stringify(response));
   let newsHtml = "";
